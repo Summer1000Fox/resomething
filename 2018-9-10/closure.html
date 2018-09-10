@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="area"></div>
+</body>
+
+<script>
+    function Circle(r){
+        this.r = r;
+    }
+
+    Circle.Pi = 3.14159;
+    Circle.prototype.area = function(){
+        return Circle.Pi * this.r * this.r;
+    }
+
+    var c = new Circle(18);
+
+    alert(c.area());
+    document.getElementById("area").innerHTML = c.area();
+    document.write(c.area());
+</script>
+
+</html>
