@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<button id="btn">click me</button>
+
+<p id="mp">bind multiple events to the button at the same time </p>
+
+</body>
+
+<script>
+    var btn = document.getElementById('btn');
+    var p = document.getElementById('mp');
+
+    btn.addEventListener('click',clickbtn,true);
+    btn.addEventListener('mouseover',overbtn,true);
+    btn.addEventListener('mouseout',outbtn,false);
+
+    function clickbtn(){
+        p.innerHTML += '<br>button is clicked';
+    }
+
+    function overbtn(){
+        p.innerHTML += '<br>mouse is over';
+    }
+
+    function outbtn(){
+        p.innerHTML += '<br>mouse is out';
+    }
+
+</script>
+
+</html>

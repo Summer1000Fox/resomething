@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1 {
+            /*width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 400px;
+            top: 200px;
+            background: red;*/
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+<div id="div1">这里是错误信息</div>
+<script src="http://lib.sinaapp.com/js/jquery/1.7/jquery.min.js"></script>
+<script>
+    //for(var i=1; 4>=i; i++) {
+        shake('div1');
+    //}
+    function shake(o){
+        var $panel = $("#"+o);
+        box_left = ($(window).width() -  $panel.width()) / 2;
+        $panel.css({'left': box_left,'position':'absolute'});
+        for(var i=1; 4>=i; i++){
+            $panel.animate({left:box_left-(40-10*i)},50);
+            $panel.animate({left:box_left+2*(40-10*i)},50);
+        }
+    }
+</script>
+</body>
+</html>

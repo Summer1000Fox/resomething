@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: #acffcb;
+        }
+        form{
+            width: 600px;
+            height: 460px;
+            background: #33344a;
+        }
+        input{
+            display: none;
+        }
+        input+i{
+            font-style: normal;
+            width: 100px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            display: inline-block;
+
+
+        }
+        input:checked+i{
+            background: #e74c3c;
+            color: white;
+        }
+        input+i+span{
+            display: none;
+        }
+        input:checked+i+span{
+            width: 600px;
+            height: 400px;
+            display: block;
+            background: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <label><input type="radio" name="nn" checked="checked"><i>水浒传</i><span>《水浒传》是中国历史上第一部用古白话文写成的歌颂农民起义的长篇章回体版块结构**，以宋江领导的起义军为主要题材，通过一系列梁山英雄反抗压迫、英勇斗争的生动故事，暴露了北宋末年统治阶级的腐朽和残暴，揭露了当时尖锐对立的社会矛盾和“官逼民反”的残酷现实。按120回本计，前70回讲述各个好汉上梁山，后50回主要为宋江全伙受招安为朝廷效力，以及被奸臣所害。</span></label>
+    <label><input type="radio" name="nn"><i>三国演义</i><span>《三国演义》是中国古典四大名著之一，全名为《三国志通俗演义》。作者是元末明初**家罗贯中，是中国第一部长篇章回体历史演义**。描写了从东汉末年到西晋初年之间近105年的历史风云。全书反映了三国时代的政治军事斗争，反映了三国时代各类社会矛盾的转化，并概括了这一时代的历史巨变，塑造了一批叱咤风云的三国英雄人物。</span></label>
+    <label><input type="radio" name="nn"><i>西游记</i><span>《西游记》是中国古典四大名著之一，是由明代**家吴承恩所创作的中国古代第一部浪漫主义的长篇神魔**。主要描写了唐朝太宗贞观年间孙悟空、猪八戒、沙僧、白龙马四弟子保护唐僧西行取经，沿途历经九九八十一难，一路降妖伏魔，化险为夷，最后到达西天，取得真经的故事。取材于《大唐三藏取经诗话》和汉族民间传说。</span></label>
+    <label><input type="radio" name="nn"><i>红楼梦</i><span>《红楼梦》，中国古典四大名著之首，清代作家曹雪芹创作的章回体长篇**[1] 。早期仅有前八十回抄本流传，八十回后部分未完成且原稿佚失。原名《脂砚斋重评石头记》。程伟元邀请高鹗协同整理出版百二十回全本[2] ，定名《红楼梦》。亦有版本作《金玉缘》。</span></label>
+</form>
+</body>
+</html>

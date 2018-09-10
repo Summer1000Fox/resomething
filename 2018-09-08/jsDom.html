@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsDom</title>
+    <style>
+        #img1{
+            /*width: 300px!important;*/
+        }
+    </style>
+</head>
+<body>
+    <hr>
+    <div id="id1">
+
+        <h1>这里是标题</h1>
+    </div>
+    <div id="id2">
+        一个大标题
+    </div>
+    <div class="class1">
+        <p>p标签的内容</p>
+        <a href="http://www.baidu1.com">baidu</a>
+        <a href="http://www.baidu2.com">baidu2</a>
+        <a href="http://www.baidu3.com">baidu3</a>
+        <a href="http://www.baidu4.com">baidu4</a>
+    </div>
+
+    <img id="img1"/>
+
+    <button type="button" onclick="document.getElementById('id2').style.color = 'red';">点击大标题变红</button>
+
+    <div>
+        <p id="showText">there are some text</p>
+        <button type="button" onclick="showT();">show text</button>
+        <button type="button" onclick="hiddenT();">hidden text</button>
+    </div>
+
+    <hr>
+    <h1 onclick="this.innerHTML='yangyangyang';this.style.color='red';">点了会变样</h1>
+
+    <div style="background-color:red;" onmouseover="mover(this);" onmouseout="mout(this);">
+        emmmm
+    </div>
+
+    <button id="jianting">事件监听</button>
+</body>
+<script>
+    var x = document.getElementById('id1');
+    var y = x.getElementsByTagName('h1');
+    document.write(y[0].innerHTML);
+
+    var z = document.getElementsByClassName('class1');
+    //alert(z[0].innerHTML);
+
+    document.write(Date());
+
+    document.getElementById('id1').innerHTML = '<div style="color:green;">这里是新的P标签</div>';
+    document.getElementsByClassName('class1').innerHtml = "23333333333";
+
+    //使用jsDom改变html属性
+    var img = document.getElementById('img1');
+    img.src = '0.jpg';
+    //img.style = "width:200px!important;height:100%;";
+    img.style.width = '400px';
+
+    function showT(){
+        document.getElementById('showText').style.visibility = 'visible';
+    }
+
+    function hiddenT(){
+        document.getElementById('showText').style.visibility = 'hidden';
+    }
+
+    function mover(obj){
+        obj.innerHTML = 'mouse over';
+    }
+
+    function mout(obj){
+        obj.innerHTML = 'mouse out';
+    }
+
+    document.getElementById('jianting').addEventListener('click',jiantingFun,false);
+
+    function jiantingFun(){
+        alert('监听事件');
+    }
+</script>
+</html>
