@@ -18,5 +18,5 @@ function get_variable_name(&$var, $scope=null){
     $name = array_search($var, $scope, true); // 根据值查找变量名称  
   
     $var = $tmp;  
-    return $name;  
+    return $name;
 }  
